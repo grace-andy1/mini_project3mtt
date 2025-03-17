@@ -1,30 +1,15 @@
-import random
+Project: Number Guessing Game
+Objective:
+Create a number-guessing game in which the user guesses a randomly generated number within a certain range. The program will provide feedback on whether the guess is too high, too low, or correct.
 
-def number_guessing_game():
-    # Step 1: Generate a random number between 1 and 100
-    number_to_guess = random.randint(1, 100)
-    guess = None
-    attempts = 0
+Steps:
+Generate a Random Number: Use Python’s random module to generate a random number between 1 and 100.
 
-    print("Welcome to the Number Guessing Game!")
-    print("I have selected a number between 1 and 100. Can you guess it?")
+User Input: Prompt the user to enter their guess.
 
-    # Step 4: Loop until the user guesses the correct number
-    while guess != number_to_guess:
-        try:
-            # Step 2: Prompt the user to enter their guess
-            guess = int(input("Enter your guess: "))
-            attempts += 1
+Conditional Statements: Use if, elif, and else to compare the user’s guess with the random number.
 
-            # Step 3: Conditional statements to provide feedback
-            if guess < number_to_guess:
-                print("Too low! Try again.")
-            elif guess > number_to_guess:
-                print("Too high! Try again.")
-            else:
-                print(f"Congratulations! You've guessed the number in {attempts} attempts.")
-        except ValueError:
-            print("Please enter a valid number.")
+Loop: Use a while loop to allow the user to keep guessing until they get the correct number.
 
-if __name__ == "__main__":
-    number_guessing_game()
+Feedback: Provide feedback after each guess, telling the user if their guess was too high, too low, or correct.
+
